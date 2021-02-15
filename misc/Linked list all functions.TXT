@@ -1,0 +1,96 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+typedef struct
+{int data;
+struct node *next;
+}node;
+
+node createlink(void);
+void displaylink(node *h);
+void insertbegin(node *h);
+void insertend(node *h);
+void insanypos(node *h,int n);
+
+void main()
+{int j;node H; 
+clrscr();
+printf("We would create a node\n");
+createlink();
+
+getch();
+}
+void displaylink(node *h)
+{
+node *x;
+x1=h;
+while(x->next!=NULL)
+ {printf("%d\t",x->data);
+  x=x->next;}
+}
+
+void insertbegin(node *h)
+{
+node *p;
+p1=(node*)malloc(sizeof(node));
+printf("Enter element\n");
+scanf("%d",&p->data);
+p->next=NULL;
+p->next=h;
+h=p;
+displaylink(h);
+}
+
+void insertend(node *h)
+{
+node *p,*x;
+x=h;
+
+while(x->next!=NULL);
+x=x->next;}
+
+p=(node*)malloc(sizeof(node));
+printf("Enter element\n");
+scanf("%d",&p->data);
+x->next=p;
+p->next=NULL;
+displaylink(h);
+}
+
+void insanypos(node *h,int n)
+{
+node *a,*b;int j;
+a=(node*)malloc(sizeof(node));
+printf("Enter element\n");
+scanf("%d",&a->data);
+a->next=NULL;
+b=h3;
+for(j=0;j<=n-1;j++)
+b=b->next;
+
+a->next=b->next;
+b->next=a;
+displaylink(h3);
+}
+
+node createlink(void)
+{
+node *head,*p,*q;int i,n;
+head=(node*)malloc(sizeof(node));
+printf("Enter 1st element\n");
+scanf("%d",head->data);
+head->next=NULL;
+q=head;
+printf("How many elements?\n");
+scanf("%d",&n);
+printf("Enter elements\n");
+for(i=0;i<=n-1;i++)
+{
+p=(node*)malloc(sizeof(node));
+scanf("%d",p->data);
+p->next=NULL;
+q->next=p;
+p=q;
+}
+displaylink(head);
+}

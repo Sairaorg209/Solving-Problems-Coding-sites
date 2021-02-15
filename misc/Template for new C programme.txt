@@ -1,0 +1,43 @@
+
+#include<stdio.h>
+#include<conio.h>
+
+typedef struct
+{int rownum,colnum,data;
+}element;
+
+typedef struct
+{element e[20];
+}stack;
+
+void main()
+{
+stack s1,s2,s3;int n,i;
+clrscr();
+printf("How many elements do you have for each sparse matrix\n");
+scanf("%d",&n);
+printf("Enter elements with row number and column number for 1st matrix\n");
+for(i=1;i<=n;i++)
+{
+scanf("%d%d%d",&s1.e[i].data,&s1.e[i].rownum,&s1.e[i].colnum
+}
+
+printf("Enter elements with row number and column number for 2nd matrix\n");
+for(i=1;i<=n;i++)
+{
+scanf("%d%d%d",&s2.e[i].data,&s2.e[i].rownum,&s2.e[i].colnum
+}
+
+printf("1st sparse matrix\nelement\trow\tcolumn\n");
+for(i=1;i<=n;i++)
+{
+scanf("%d%d%d",&s1.e[i].data,&s1.e[i].rownum,&s1.e[i].colnum
+}
+
+printf("2nd sparse matrix\nelement\trow\tcolumn\n"); 
+for(i=1;i<=n;i++)
+{
+scanf("%d%d%d",&s2.e[i].data,&s2.e[i].rownum,&s2.e[i].colnum
+}
+getch();
+}

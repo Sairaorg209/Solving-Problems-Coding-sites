@@ -1,0 +1,37 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+typedef struct
+{int coeff,exp;
+struct pnode *next;
+}pnode;
+
+
+
+void main()
+{pnode *p1,*p2,*rslt=NULL,*q,*r,*p,*pl,*r1;
+
+int newcoeff,newexp,i,n;clrscr();
+printf("1st element of 1st polynomial(coefficient and exponent)\n");
+p1=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&p1->coeff,&p1->exp) ;
+p1->next=NULL;
+printf("no. of xtra elements?\n");
+scanf("%d",&n);
+pl=p1;
+for(i=0;i<n;i++)
+{printf("%d th element of 1st polynomial(coefficient and exponent)\n",i+2);
+p=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&p->coeff,&p->exp);
+p->next=NULL;
+pl->next=p;
+pl=p;
+}
+printf("So the 1st polynomial thus formed is\n");
+pl=p1;
+while(pl->next!=NULL)
+{printf("%dx^(%d)+",pl->coeff,pl->exp);
+pl=pl->next;}
+printf("+%dx^(%d)",pl->coeff,pl->exp);
+getch();}

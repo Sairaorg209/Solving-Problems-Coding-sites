@@ -1,0 +1,92 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+typedef struct
+{int coeff,exp;
+struct pnode *next;
+}pnode;
+
+void main()
+{pnode *p1,*p2,*rslt=NULL,*q,*r,*p,*pl,*r1,*poly1,*poly2,*r3,*r2;
+
+int newcoeff,newexp,i,n,n1;clrscr();
+printf("1st element of 1st polynomial(coefficient and exponent)\n");
+p1=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&p1->coeff,&p1->exp) ;
+p1->next=NULL;
+printf("no. of xtra elements?\n");
+scanf("%d",&n);
+pl=p1;
+for(i=0;i<n;i++)
+{printf("%d th element of 1st polynomial(coefficient and exponent)\n",i+2);
+p=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&p->coeff,&p->exp);
+p->next=NULL;
+pl->next=p;
+pl=p;
+}
+
+
+printf("1st element of 2nd polynomial(coefficient and exponent)\n");
+p2=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&p2->coeff,&p2->exp) ;
+p2->next=NULL;
+printf("no. of xtra elements?\n");
+scanf("%d",&n1);
+r=p2;
+for(i=0;i<n1;i++)
+{printf("%d th element of 2nd polynomial(coefficient and exponent)\n",i+2);
+q=(pnode*)malloc(sizeof(pnode));
+scanf("%d%d",&q->coeff,&q->exp);
+q->next=NULL;
+r->next=q;
+r=q;
+}
+
+printf("So the 1st polynomial thus formed is\n");
+pl=p1;
+while(pl!=NULL)
+{printf("+(%d)x^(%d)",pl->coeff,pl->exp);
+pl=pl->next;}
+
+printf("\nand the 2nd polynomial thus formed is\n");
+r=p2;
+while(r!=NULL)
+{printf("+(%d)x^(%d)",r->coeff,r->exp);
+r=r->next;}
+poly1=p1;poly2=p2;
+
+while(poly1!=NULL && poly2!=NULL)
+{
+
+
+
+
+if(poly1->exp==poly2->exp)
+  {newcoeff=poly2->coeff+poly1->coeff;
+  newexp=poly2->exp;
+  poly1=poly1->next;
+poly2=poly2->next;}
+
+if(newcoeff!=0)
+{
+r1=(pnode*)malloc(sizeof(pnode));
+r1->coeff=newcoeff;r1->exp=newexp;
+r1->next=NULL;
+if(rslt==NULL)
+{rslt=r1;r3=rslt;}
+
+else {r3->next=r1;r1=r3;}
+}
+}
+
+
+printf("\nResult\n");
+r2=rslt;
+while(r2!=NULL)
+{printf("+(%d)x^(%d)",r2->coeff,r2->exp);
+r2=r2->next;}
+
+getch();
+}
