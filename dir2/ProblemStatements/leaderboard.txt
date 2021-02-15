@@ -1,0 +1,280 @@
+
+Live Events 9
+HackerEarth
+07
+
+DAY
+:
+00
+
+HRS
+:
+09
+
+MIN
+:
+14
+
+SEC
+April Circuits
+Live
+
+23 Apr, 09:00 PM IST - 01 May, 09:00 PM IST
+Instructions
+Problems
+My Submissions
+Leaderboard
+Analytics
+Judge
+Recent Submissions
+DEVELOPERS 	RESULT 	LANGUAGE
+makarand dhuri 	
+	Java
+Lukass 	
+	C++
+Sachin Kariyatti... 	
+	Java
+Lukass 	
+	C++
+Winston Fernande... 	
+	Java
+Hoang Nguyen Phu... 	
+	Java
+Naveed Mohammad ... 	
+	Python
+Lukass 	
+	C++
+Sumit Gupta 	
+	C
+Sumit Gupta 	
+	C
+Tran Thanh Tu 	
+	C++
+Sumit Gupta 	
+	C
+Saurav Sarkar 	
+	Java
+william.marstran... 	
+	C#
+Tran Thanh Tu 	
+	C++
+Lukass 	
+	C++
+Saurav Sarkar 	
+	Java
+Rushikesh Deshpa... 	
+	C++
+william.marstran... 	
+	C#
+Piyush Ravi 	
+	Python
+Lukass 	
+	C++
+Rushikesh Deshpa... 	
+	C++
+ankurkumar031991... 	
+	C++
+Lukass 	
+	C++
+ankurkumar031991... 	
+	C++
+Sirapop Theerana... 	
+	C++
+Rakesh Kumar 	
+	C++
+ankurkumar031991... 	
+	C++
+Zaki Alam 	
+	C++
+Prannoy Mittal 	
+	Python
+Vignesh Jayavel 	
+	Python
+Tran Thanh Tu 	
+	C++
+Sirapop Theerana... 	
+	C++
+View All
+Problems / 1B - Bear and Leaderboard
+1B - Bear and Leaderboard
+Max. Marks: 100
+
+Limak is a brown bear, experienced in organizing programming contests. Today, his only responsibility is to watch the leaderboard and make sure that everything is displayed correctly.
+
+There are n
+participants, numbered 1 through n. Initially, every participant has 0
+
+points. During the contest participants will gain more points and thus the leaderboard may change.
+
+You are given q
+queries (events). The i-th query contains two integers ai and bi. It denotes that a participant ai gets bi points (his/her number of points is increased by bi
+
+).
+
+For each participant, his or her place is equal to the number of participants with more points, increased by 1
+
+. You may refer to the sample explanation for an example.
+
+Let's define hash of participant as the product of his/her place and the number of points. After each query, Limak is going to find the sum of hashes of participants. Can you help him? After each query, print one line with the sum of hashes of participants.
+Input format
+
+The first line of the input contains two integers n
+and q
+
+— the number of participants and the number of queries, respectively.
+
+The next q
+lines describe queries. The i-th of them contains two integers ai and bi — the participant index and the number of gained points in the i
+
+-th query.
+Output format
+
+After each query, output a single line containing the sum of hashes of participants.
+Constraints
+
+    1=n,q=500000
+
+1=ai=n
+1=bi=106
+
+Subtasks
+Extra constraints 	Points 	Which tests
+n,q=2000
+	25 	1-10
+bi=5
+	25 	11-20
+each participant will have at most 106
+points 	25 	21-30
+no extra constraints 	25 	31-40
+SAMPLE INPUT
+
+4 6
+3 100
+2 60
+1 80
+2 20
+1 20
+4 17
+
+SAMPLE OUTPUT
+
+100
+220
+440
+420
+440
+508
+
+Explanation
+
+In the sample test, there are n=4
+participants. Initially, all of them have 0 points, so they all have the 1
+
+-st place ex aequo.
+
+    After the first query, participant 3
+
+has 100 points and is winning, with hash equal to 1·100=100. The sum of hashes is 100+0+0+0=100
+
+.
+
+After the second query, participant 2
+has the second place with 60 points and hash 2·60=120, in total 100+120+0+0=220
+
+.
+
+After the third query, the leaderboard looks like follows: (100,80,60,0)
+. The sum of hashes is 100·1+80·2+60·3+0·4=100+160+180=440
+
+.
+
+In the fourth query participant 2
+gets 20 points and the leaderboard is (100,80,80,0) then, with the sum 100·1+80·2+80·2+0·4=420
+
+.
+
+After the fifth query, the answer is 100·1+100·1+80·3+0=440
+
+.
+
+After the last query, 100·1+100·1+80·3+17·4=508
+
+    .
+
+Time Limit: 5.0 sec(s) for each input file.
+Memory Limit: 256 MB
+Source Limit: 1024 KB
+Marking Scheme: Marks are awarded if any testcase passes.
+Allowed Languages: C, CPP, CLOJURE, CSHARP, GO, HASKELL, JAVA, JAVASCRIPT, JAVASCRIPT_NODE, LISP, OBJECTIVEC, PASCAL, PERL, PHP, PYTHON, RUBY, R, RUST, SCALA
+CODE EDITOR
+Load Code Editor
+You can submit code after loading editor.
+Your Rating:
+About Us
+
+    Blog
+    Engineering Blog
+    Updates & Releases
+    Team
+    Careers
+    In the Press
+
+HackerEarth
+
+    API
+    Chrome Extension
+    CodeTable
+    HackerEarth Academy
+    Developer Profile
+    Resume
+    Get Badges
+    Campus Ambassadors
+    Get Me Hired
+    Privacy
+    Terms of Service
+
+Developers
+
+    AMA
+    Code Monk
+    Judge Environment
+    Solution Guide
+    Problem Setter Guide
+    Practice Problems
+    HackerEarth Challenges
+    College Challenges
+    College Ranking
+    Organise Hackathon
+    Hackathon Handbook
+    Competitive Programming
+    Open Source
+
+Employers
+
+    Developer Sourcing
+    Lateral Hiring
+    Campus Hiring
+    Hackathons
+    FAQs
+    Customers
+
+Reach us
+
+IIIrd Floor, Salarpuria Business Center,
+4th B Cross Road, 5th A Block,
+Koramangala Industrial Layout,
+Bangalore, Karnataka 560095, India.
+
+contact@hackerearth.com
++91-80-4155-4695
++1-650-461-4192
+© 2016 HackerEarth
+
+
+	
+	
+		
+			
+		
+	
+

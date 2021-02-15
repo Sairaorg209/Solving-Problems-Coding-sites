@@ -1,0 +1,40 @@
+The mad biologist of Dreamland is performing some secret experiment which he calls - The Xperiment. He is working on some biological mutation of human species, for which he is has sampled N mice in his laboratory. Everyday he performs some tests on the specimen and at the end of the day, he gives a supplementary dose to each of the mice. Each mice is given different amount of supplement.
+
+But the experiment would not succeed if any of the mice gets same proportion of supplement, i.e. if you give, say A, amount of supplement to the some mouse then no other mouse should get any multiple or divisor A supplements. This is to ensure that the data collected from the samples are as varied as possible.
+
+Alas! There is no funding on experiments in Dreamland provided by its government. So, the scientist has to buy these supplements at his own expenses. Therefore, he wants to minimize the number of supplements he need to buy
+
+You need to help the scientist. Given the number of mice N, you need to output the supplements for each of the mice. Each supplement should be an integer in the range [1, 106]
+
+Input & Output
+
+The first line of each file will contain the number of test cases T. Each of the next T lines will contain a number N.
+
+For every test case output N space separated numbers (in any order), the answer to that case.
+Constraints
+
+1 = T = 500
+1 = N = 5000
+
+Scoring
+
+If your solution is not judged wrong (see below for reasons you may get for wrong answer), then we add up all the N supplements to determine the total cost to the scientist. This total cost divided by 106becomes the score for that test case. The overall score is the sum of all test files. Your target should be to minimize the score.
+
+When can my solution get Wrong Answer
+
+    When you don't print N space separated integers for each test case.
+    When any of the numbers are out of the range [1, 106].
+    All N numbers for a particular test case are not distinct.
+    For a particular test case, if any two numbers you printed are i & j with i > j; then mod(i, j) = 0
+
+Sample Input (Plaintext Link)
+
+1
+2
+
+Sample Output (Plaintext Link)
+
+2 3
+
+Explanation
+1) In the first test case, we cannot choose 1 because if we choose it, then we cannot choose any other number. It will a multiple of 1. So we choose 2 and 3. Score is 0.000005.
